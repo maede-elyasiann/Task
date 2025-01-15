@@ -1,8 +1,7 @@
 package org.example.lookinsure.service.impl;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.example.lookinsure.api.request.ProductConfigRequest;
+import org.example.lookinsure.service.request.ProductConfigRequest;
 import org.example.lookinsure.domain.ProductConfig;
 import org.example.lookinsure.mapper.ProductConfigMapper;
 import org.example.lookinsure.repository.ProductConfigRepository;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@Slf4j
 @RequiredArgsConstructor
 public class ProductConfigServiceImpl implements ProductConfigService {
 

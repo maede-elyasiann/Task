@@ -1,4 +1,4 @@
-package org.example.lookinsure.api.request;
+package org.example.lookinsure.service.request;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -23,4 +23,5 @@ public class ProductConfigRequest {
 
     @NotNull
     private Boolean isVisible;
+
 }

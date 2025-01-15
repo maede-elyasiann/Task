@@ -1,6 +1,6 @@
 package org.example.lookinsure.mapper;
 
-import org.example.lookinsure.api.request.ProductConfigRequest;
+import org.example.lookinsure.service.request.ProductConfigRequest;
 import org.example.lookinsure.domain.ProductConfig;
 import org.example.lookinsure.service.dto.ProductConfigDTO;
 import org.mapstruct.Mapper;
