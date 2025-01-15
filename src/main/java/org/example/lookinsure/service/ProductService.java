@@ -1,10 +1,13 @@
 package org.example.lookinsure.service;
 
-import org.example.lookinsure.api.response.ProductResponseList;
+import org.example.lookinsure.service.request.ProductRequest;
+import org.example.lookinsure.service.response.ProductResponse;
 
 import java.util.List;
 
 public interface ProductService {
 
-    List<ProductResponseList> getAll();
+    Long create(ProductRequest productRequest);
+
+    List<ProductResponse> getAll();
 }

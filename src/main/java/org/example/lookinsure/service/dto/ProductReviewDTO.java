@@ -12,6 +12,6 @@ public class ProductReviewDTO {
     private Long productId;
     private List<CommentDTO> comments;
     private Double averageRate;
-    private Long totalReviews;
+    private Integer totalReviews;
 
 }
