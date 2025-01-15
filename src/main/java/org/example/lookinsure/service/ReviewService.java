@@ -3,6 +3,7 @@ package org.example.lookinsure.service;
 import org.example.lookinsure.enumaration.ReviewStatus;
 import org.example.lookinsure.service.dto.ProductReviewDTO;
 import org.example.lookinsure.service.dto.ReviewDTO;
+import org.example.lookinsure.service.request.ProductReviewRequest;
 
 import java.util.List;
 
@@ -12,4 +13,6 @@ public interface ReviewService {
     void updateReviewStatus(Long reviewId, ReviewStatus approved);
 
     ProductReviewDTO getProductReviewData(Long productId);
+
+    void add(ProductReviewRequest request);
 }

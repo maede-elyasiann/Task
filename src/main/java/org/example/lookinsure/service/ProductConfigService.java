@@ -1,5 +1,6 @@
 package org.example.lookinsure.service;
 
+import org.example.lookinsure.domain.ProductConfig;
 import org.example.lookinsure.service.request.ProductConfigRequest;
 import org.example.lookinsure.service.dto.ProductConfigDTO;
 
@@ -12,4 +13,6 @@ public interface ProductConfigService {
     void deleteConfig(Long productId);
 
     List<ProductConfigDTO> getVisibleProducts();
+
+    ProductConfig getConfigByProductId(Long productId);
 }
