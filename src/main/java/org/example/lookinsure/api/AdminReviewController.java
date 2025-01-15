@@ -3,6 +3,7 @@ package org.example.lookinsure.api;
 import lombok.AllArgsConstructor;
 import org.example.lookinsure.enumaration.ReviewStatus;
 import org.example.lookinsure.service.ReviewService;
+import org.example.lookinsure.service.request.UpdateReviewStatusRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,10 +21,9 @@ public class AdminReviewController {
         return ResponseEntity.ok().build();
     }
 
-    @PutMapping("/{reviewId}")
-    public ResponseEntity<String> updateReviewStatus(@PathVariable Long reviewId,
-                                                     @RequestParam ReviewStatus status) {
-        reviewService.updateReviewStatus(reviewId, status);
+    @PutMapping
+    public ResponseEntity<String> updateReviewStatus(@RequestBody UpdateReviewStatusRequest request) {
+        reviewService.updateReviewStatus(request);
         return ResponseEntity.ok().build();
     }
 }
