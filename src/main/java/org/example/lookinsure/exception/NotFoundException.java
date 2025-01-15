@@ -9,6 +9,7 @@ public class NotFoundException extends BaseException {
 
     public NotFoundException(String desc) {
         super(desc);
+        this.desc = desc;
     }
 
     @Override
