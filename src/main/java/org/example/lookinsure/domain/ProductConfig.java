@@ -30,13 +30,13 @@ public class ProductConfig {
     private ReviewVisibility reviewVisibility;
 
     @Column(name = "is_comment_enabled")
-    private Boolean isCommentEnabled;
+    private Boolean commentEnabled;
 
     @Column(name = "is_rating_enabled")
-    private Boolean isRatingEnabled;
+    private Boolean ratingEnabled;
 
     @Column(name = "is_visible")
-    private Boolean isVisible;
+    private Boolean visible;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "created_at")
