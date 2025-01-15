@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface ProductConfigRepository extends JpaRepository<ProductConfig, Long> {
 
-    List<ProductConfig> findByIsVisibleTrue();
+    List<ProductConfig> findByVisibleTrue();
 
 }

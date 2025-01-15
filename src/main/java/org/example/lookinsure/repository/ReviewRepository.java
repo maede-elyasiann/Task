@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface ReviewRepository extends JpaRepository<Review, Long> {
 
-    List<Review> findByProductIdAndReviewStatus(Long productId, ReviewStatus reviewStatus);
+    List<Review> findByProductIdAndStatus(Long productId, ReviewStatus reviewStatus);
 
     @Query("""
             SELECT r FROM Review r WHERE r.productId = :productId
@@ -18,6 +18,6 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
              ORDER BY r.createdAt DESC
             """)
     List<Review> findReviewsByProductId(@Param("productId") Long productId,
-                                        @Param(("staus")) ReviewStatus status);
+                                        @Param(("status")) ReviewStatus status);
 
 }
