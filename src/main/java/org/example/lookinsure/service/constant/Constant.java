@@ -8,6 +8,7 @@ public class Constant {
     @NoArgsConstructor(access = AccessLevel.PRIVATE)
     public static class ExceptionMessage {
         public static final String REVIEW_NOT_FOUND = "lookinsure.exception.review.not.found";
+        public static final String PROVIDER_NOT_FOUND = "lookinsure.exception.provider.not.found";
     }
 
     @NoArgsConstructor(access = AccessLevel.PRIVATE)
