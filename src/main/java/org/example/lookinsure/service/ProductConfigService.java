@@ -1,6 +1,6 @@
 package org.example.lookinsure.service;
 
-import org.example.lookinsure.api.request.ProductConfigRequest;
+import org.example.lookinsure.service.request.ProductConfigRequest;
 import org.example.lookinsure.service.dto.ProductConfigDTO;
 
 import java.util.List;
