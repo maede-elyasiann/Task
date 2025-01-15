@@ -8,9 +8,6 @@ import org.example.lookinsure.service.request.ProductRequest;
 import org.example.lookinsure.service.response.ProductResponse;
 import org.mapstruct.*;
 
-
-import java.util.Map;
-
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
 
@@ -23,14 +20,9 @@ public interface ProductMapper {
         product.setProvider(provider);
     }
 
+    @Mapping(source = "product.provider.name", target = "provider")
     ProductResponse toProductResponse(Product product,
-                                      Map<Long, Integer> productPriceMap,
+                                      Integer price,
                                       ProductReviewDTO productReview,
                                       ProductConfigDTO productConfig);
-
-    @AfterMapping
-    default void setPrice(Map<Long, Double> productPriceMap, Product product, @MappingTarget ProductResponse productResponse){
-        Double price = productPriceMap.getOrDefault(product.getId(), 0.0);
-        productResponse.setPrice(price);
-    }
 }

@@ -21,6 +21,7 @@ import org.example.lookinsure.service.dto.CommentDTO;
 import org.example.lookinsure.service.dto.ProductReviewDTO;
 import org.example.lookinsure.service.dto.ReviewDTO;
 import org.example.lookinsure.service.request.ProductReviewRequest;
+import org.example.lookinsure.service.request.UpdateReviewStatusRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -44,10 +45,10 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
-    public void updateReviewStatus(Long reviewId, ReviewStatus status) {
-        Review review = repository.findById(reviewId)
+    public void updateReviewStatus(UpdateReviewStatusRequest request) {
+        Review review = repository.findById(request.getReviewId())
                 .orElseThrow(() -> new NotFoundException(Constant.ExceptionMessage.REVIEW_NOT_FOUND));
-        review.setStatus(status);
+        review.setStatus(request.getStatus());
         repository.save(review);
     }
 

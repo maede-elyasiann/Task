@@ -61,7 +61,7 @@ public class ProductServiceImpl implements ProductService {
             toReturn = products.stream()
                     .map(product -> mapper.toProductResponse(
                             product,
-                            productPriceMap,
+                            productPriceMap.getOrDefault(product.getId(), 0),
                             reviewService.getProductReviewData(product.getId()),
                             this.getProductConfig(product.getId(), visibleProducts)))
                     .toList();

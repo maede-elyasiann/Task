@@ -15,8 +15,8 @@ public class ProductResponse {
     private Long id;
     private String name;
     private String description;
-    private String providerName;
-    private Double price;
+    private String provider;
+    private Integer price;
     private List<CommentDTO> comments;
     private Double averageRate;
     private Integer totalReviews;
